@@ -10,7 +10,7 @@
 
   <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <link rel="icon" type="image/png" href="/static/images/icons/favicon.ico"/>
+  <link rel="icon" type="image/png" href="/static/images/icons/icono.png"/>
   <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
@@ -26,21 +26,14 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger">Páginas que te interesan →</a>
-
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Aquí puedes publicar y ver algunas empresas →</a>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="https://www.youtube.com/">Youtube</a>
+            <a class="nav-link js-scroll-trigger" href="#see">Ver empresas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="https://www.facebook.com/">Facebook</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="https://github.com/">Github</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="https://www.instagram.com/?hl=es-la">Instagram</a>
+            <a class="nav-link js-scroll-trigger" href="#contact">Publica tu empresa</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="/logout">Log out</a>
@@ -60,7 +53,65 @@
       </div>
     </div>
   </header>
-
+<!-- Ver empresas -->
+  <section class="page-section" id="see">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Empresas</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <ul id="all">
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Crear empresa -->
+  <section class="page-section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Publica tu empresa aquí</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <form id="contactForm" name="sentMessage" novalidate="novalidate">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input class="form-control" id="bussiness_name" type="text" placeholder="Nombre de la empresa *" required="required">
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="bussiness_email" type="email" placeholder="Ingresa tu e-mail *" required="required">
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="bussiness_number" type="tel" placeholder="Número de teléfono *">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <textarea class="form-control" id="bussiness_description" placeholder="Agrega una descripción *" required="required"></textarea>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-lg-12 text-center">
+                <div id="success"></div>
+                <button class="btn btn-primary btn-xl text-uppercase" type="submit" onclick="addBussiness()">Publicar empresa</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Integrantes -->
     <section class="bg-light page-section" id="team">
         <div class="container">
           <div class="row">
@@ -99,6 +150,11 @@
           </div>
         </div>
     </section>
+
+  <script src="/static/vendor/jquery/jquery.min.js"></script>
+  <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/js/libs/agency.min.js"></script>
 
 </body>
 

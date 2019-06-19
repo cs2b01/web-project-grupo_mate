@@ -19,7 +19,7 @@ function postData(){
                 },
             error: function(response){
                 if(response['responseText'] == 'OK'){
-                    window.location.replace("/static/index.html")
+                    window.location.replace("/static/login.html")
                 }else if(response['responseText']=='NOT'){
                     alert("Username ya existe");
                 }

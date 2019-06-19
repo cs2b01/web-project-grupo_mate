@@ -1,8 +1,8 @@
 $(function(){
-    var url = "http://127.0.0.1:8080/users";
+    var url = "http://127.0.0.1:8080/bussiness";
 
 
-    $("#grid").dxDataGrid({
+    $("#grid_bussiness").dxDataGrid({
         dataSource: DevExpress.data.AspNet.createStore({
             key: "id",
             loadUrl: url ,
@@ -34,13 +34,13 @@ $(function(){
             dataType: "number",
             allowEditing: false
         }, {
-            dataField: "username"
+            dataField: "bussiness_name"
         }, {
-            dataField: "name"
+            dataField: "bussiness_email"
         }, {
-            dataField: "fullname"
+            dataField: "bussiness_number"
         }, {
-            dataField: "password"
+            dataField: "bussiness_description"
         }, ],
     }).dxDataGrid("instance");
 });

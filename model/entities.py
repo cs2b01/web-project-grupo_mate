@@ -10,12 +10,10 @@ class User(connector.Manager.Base):
     password = Column(String(12))
     username = Column(String(12))
 
-class Message(connector.Manager.Base):
-    __tablename__ = 'messages'
-    id = Column(Integer, Sequence('message_id_seq'), primary_key=True)
-    content = Column(String(500))
-    sent_on = Column(DateTime(timezone=True))
-    user_from_id = Column(Integer, ForeignKey('users.id'))
-    user_to_id = Column(Integer, ForeignKey('users.id'))
-    user_from = relationship(User, foreign_keys=[user_from_id])
-    user_to = relationship(User, foreign_keys=[user_to_id])
+class Bussiness(connector.Manager.Base):
+    __tablename__ = 'bussiness'
+    id = Column(Integer, Sequence('bussiness_id_seq'), primary_key=True)
+    bussiness_name = Column(String(30))
+    bussiness_email = Column(String(30))
+    bussiness_number = Column(String(9))
+    bussiness_description = Column(String(100))

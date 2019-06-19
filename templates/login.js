@@ -16,7 +16,7 @@ function getData(){
             },
             error: function(response){
                 if(response['status']==401){
-                    alert(JSON.stringify(response));
+                    alert("Comprobar username y/o contraseña");
                 }else{
                     window.location.replace("/static/index.html")
                 }
