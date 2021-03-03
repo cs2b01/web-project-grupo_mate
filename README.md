@@ -23,3 +23,7 @@ Con el fin de mejorar aún más el comportamiento para los requisitos de escala 
 
 ## Code-On-Demand
 La adición final al conjunto de restricciones proviene del estilo de código según demanda. Esto permite extender la funcionalidad del cliente descargando y ejecutando código en forma de applets o scripts. Esto simplifica a los clientes al reducir el número de características requeridas para ser implementadas previamente. Permitir que las funciones se descarguen después de la implementación mejora la extensibilidad del sistema.
+
+##Integrantes:
+-Alonso Barrios
+-Carlos Merma
